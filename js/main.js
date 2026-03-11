@@ -40,3 +40,26 @@ function validaFormulario() {
     // Guardar en LocalStorage
     localStorage.setItem("comentarios", JSON.stringify(mensajes));
 }
+
+const keyCarrito = "carrito";
+
+function cargarCarrito() {
+    return JSON.parse(localStorage.getItem(keyCarrito)) || [];
+}
+
+function guardarCarrito(carrito) {
+    localStorage.setItem(keyCarrito, JSON.stringify(carrito));
+}
+
+function agregarAlCarrito(producto) {
+    const carrito = cargarCarrito();
+    const existe = carrito.find(item => item.id === producto.id);
+    if (existe) existe.qty += 1;
+    else carrito.push({...producto, qty: 1});
+    guardarCarrito(carrito);
+}
+
+function eliminarDelCarrito(id) {
+    const carrito = cargarCarrito().filter(item => item.id !== id);
+    guardarCarrito(carrito);
+}
