@@ -3,7 +3,55 @@ document.addEventListener('DOMContentLoaded', () =>{
     const gif = document.getElementById('myAnimacion');
     const imagenEstatica = gif.dataset.static;
     const gifSrc = gif.dataset.gif;
+ 
+   
+    gif.addEventListener('mouseover', () => {
+    gif.src = gifSrc;
+    });
 
+    gif.addEventListener('mouseout', () => {
+    gif.src = imagenEstatica;
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () =>{
+
+    const gif = document.getElementById('myAnimacionGirasol');
+    const imagenEstatica = gif.dataset.static;
+    const gifSrc = gif.dataset.gif;
+ 
+   
+    gif.addEventListener('mouseover', () => {
+    gif.src = gifSrc;
+    });
+
+    gif.addEventListener('mouseout', () => {
+    gif.src = imagenEstatica;
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () =>{
+
+    const gif = document.getElementById('myAnimacionCarnivora');
+    const imagenEstatica = gif.dataset.static;
+    const gifSrc = gif.dataset.gif;
+ 
+   
+    gif.addEventListener('mouseover', () => {
+    gif.src = gifSrc;
+    });
+
+    gif.addEventListener('mouseout', () => {
+    gif.src = imagenEstatica;
+    });
+});
+document.addEventListener('DOMContentLoaded', () =>{
+
+    const gif = document.getElementById('myAnimacionNuez');
+    const imagenEstatica = gif.dataset.static;
+    const gifSrc = gif.dataset.gif;
+ 
+   
     gif.addEventListener('mouseover', () => {
     gif.src = gifSrc;
     });

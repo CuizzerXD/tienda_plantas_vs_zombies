@@ -1,7 +1,9 @@
-body { background-color: #f4f7f6; }
+body { background-color: #ffffff; }
         .hero-section {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
             background-size: cover; background-position: center; color: white; padding: 60px 0;
+       
+            
         }
         .card-img-top { height: 180px; object-fit: contain; padding: 20px; transition: transform 0.3s ease; }
         .card:hover .card-img-top { transform: scale(1.1); }
