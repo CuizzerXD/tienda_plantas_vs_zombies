@@ -40,6 +40,7 @@
         </div>
     </header>
 
+    <!--Empieza el formulario  -->
     <main class="container my-5">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10">
@@ -47,19 +48,21 @@
                     <div class="card-body p-5">
                         <h3 class="mb-4 fw-bold text-center text-dark">Envíanos un mensaje</h3>
                         
-                        <form action="#" method="POST">
+                        <!--Nombre -->
+                        <form action="#" method="POST" id="formMensaje " onsubmit="return validaFormulario()">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="nombre" class="form-label fw-bold">Nombre Completo</label>
                                     <input type="text" class="form-control" id="nombre" placeholder="Ej. Juan Pérez" required>
                                 </div>
-                                
+                                <!--Correo  -->
                                 <div class="col-md-6 mb-3">
                                     <label for="email" class="form-label fw-bold">Correo Electrónico</label>
                                     <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com" required>
                                 </div>
                             </div>
 
+                            <!--Bando  -->
                             <div class="mb-3">
                                 <label for="bando" class="form-label fw-bold">¿Qué bando prefieres?</label>
                                 <select class="form-select" id="bando">
@@ -71,11 +74,13 @@
                                 </select>
                             </div>
                             
+                            <!--Mensaje  -->
                             <div class="mb-4">
                                 <label for="mensaje" class="form-label fw-bold">Tu Mensaje</label>
                                 <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe aquí tu duda, queja o sugerencia de jardinería..." required></textarea>
                             </div>
                             
+                            <!--Botton para enviar  -->
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-success btn-lg fw-bold">
                                     Enviar Mensaje 📬
