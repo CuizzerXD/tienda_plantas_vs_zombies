@@ -1,4 +1,4 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -21,13 +21,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="plantas.html">Plantas</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="zombies.html">Zombies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="zombies.html">Zombies</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <button class="btn btn-warning position-relative" data-bs-toggle="modal"
-                            data-bs-target="#cartModal">
+                        <button class="btn btn-warning position-relative" data-bs-toggle="offcanvas"
+                            data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
                             🛒 Carrito
                             <span id="cart-count"
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
@@ -53,35 +53,31 @@
         <div class="row g-4 mb-5" id="zombies-container"></div>
     </main>
 
-    <!--Empieza el carrito de compras  -->
-    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-warning text-dark">
-                    <h5 class="modal-title fw-bold">Tu Carrito de Adopción</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <ul id="cart-items" class="list-group mb-3">
-                        <li class="list-group-item text-center text-muted">El carrito está vacío... 🧟‍♂️🌻</li>
-                    </ul>
-                    <h5 class="text-end fw-bold">Total: $<span id="cart-total">0</span></h5>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Viendo</button>
-                    <button type="button" class="btn btn-success" onclick="checkout()">Pagar</button>
-                </div>
-            </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header bg-warning text-dark">
+            <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel">Tu Carrito de Adopción</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul id="cart-items" class="list-group mb-3">
+                <li class="list-group-item text-center text-muted">El carrito está vacío... 🧟‍♂️🌻</li>
+            </ul>
+            <h5 class="text-end fw-bold">Total: $<span id="cart-total">0</span></h5>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">Seguir Viendo</button>
+            <button type="button" class="btn btn-success" onclick="checkout()">Pagar</button>
         </div>
     </div>
 
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="liveToast" class="toast text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-body fw-bold">
-                ¡Mascota añadida al carrito! 🐾
+                ¡Mascota añadida al carrito! ✅
             </div>
         </div>
     </div>
-</body>
-</html>
 
+    <script src="js/cart.js"></script>
+
+</body>
+
+</html>
