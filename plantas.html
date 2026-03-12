@@ -25,6 +25,28 @@
                     <li class="nav-item"><a class="nav-link active" href="plantas.html">Plantas</a></li>
                     <li class="nav-item"><a class="nav-link" href="zombies.html">Zombies</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item">
+                    <audio
+                        id="bg-music"
+                        src="audio/Plants vs. Zombies (Main Theme).mp3"
+                        loop
+                    ></audio>
+                    <div class="form-check form-switch text-white ms-3">
+                        <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="musicToggle"
+                        />
+                        <label
+                        class="form-check-label ms-2"
+                        for="musicToggle"
+                        id="musicLabel"
+                        >
+                        Música: OFF
+                        </label>
+                    </div>
+                    </li>
                     <button class="btn btn-warning position-relative" data-bs-toggle="offcanvas"
                         data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
                         🛒 Carrito
@@ -76,8 +98,8 @@
             <div class="col-md-4 col-sm-6">
                 <div class="card h-100 shadow-sm card" data-precio="50">
                     <img src="img/Girasol.webp"
-                     class="card-img-top mx-auto  mt-3" id="myAnimacionGirasol" alt="Girasol"
-                      style="width: 120px; height: 120px;" data-static="img/Girasol.webp" data-gif="img/sunflower-pvz.gif">
+                    class="card-img-top mx-auto  mt-3" id="myAnimacionGirasol" alt="Girasol"
+                    style="width: 120px; height: 120px;" data-static="img/Girasol.webp" data-gif="img/sunflower-pvz.gif">
                     <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Girasol</h5>
                         <p class="card-text text-muted flex-grow-1">Esencial para tu economía. Siempre con una sonrisa
@@ -93,9 +115,9 @@
             <div class="col-md-4 col-sm-6">
                 <div class="card h-100 shadow-sm card" data-precio="150">
                     <img src="img/carnivora.webp"
-                     class="card-img-top mx-auto  mt-3" id="myAnimacionCarnivora" alt="Carnívora"
-                      style="width: 120px; height: 120px;" data-static="img/carnivora.webp" data-gif="img/planta-carnivora.gif">
-                      <div class="card-body d-flex flex-column text-center">
+                    class="card-img-top mx-auto  mt-3" id="myAnimacionCarnivora" alt="Carnívora"
+                    style="width: 120px; height: 120px;" data-static="img/carnivora.webp" data-gif="img/planta-carnivora.gif">
+                    <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Planta Carnívora</h5>
                         <p class="card-text text-muted flex-grow-1">Se come a un zombie entero de un bocado. Mastica
                             lento, ten paciencia.</p>
@@ -109,10 +131,10 @@
             <!--Empieza la carta Nuez  -->
             <div class="col-md-4 col-sm-6">
                 <div class="card h-100 shadow-sm card" data-precio="50">
-                     <img src="img/Nuez.webp"
-                     class="card-img-top mx-auto  mt-3" id="myAnimacionNuez" alt="Nuez"
-                      style="width: 120px; height: 120px;" data-static="img/Nuez.webp" data-gif="img/nuezgif.gif">
-                      <div class="card-body d-flex flex-column text-center">
+                    <img src="img/Nuez.webp"
+                    class="card-img-top mx-auto  mt-3" id="myAnimacionNuez" alt="Nuez"
+                    style="width: 120px; height: 120px;" data-static="img/Nuez.webp" data-gif="img/nuezgif.gif">
+                    <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Nuez</h5>
                         <p class="card-text text-muted flex-grow-1">Dura de roer. Excelente para ganar tiempo mientras
                             plantas más girasoles.</p>
@@ -126,9 +148,9 @@
             <div class="col-md-4 col-sm-6">
                 <div class="card h-100 shadow-sm card" data-precio="25">
                     <img src="img/Papapum.webp"
-                     class="card-img-top mx-auto  mt-3" id="myAnimacionPapa" alt="Papa"
-                      style="width: 120px; height: 120px;" data-static="img/Papapum.webp" data-gif="">
-                      <div class="card-body d-flex flex-column text-center">
+                    class="card-img-top mx-auto  mt-3" id="myAnimacionPapa" alt="Papa"
+                    style="width: 120px; height: 120px;" data-static="img/Papapum.webp" data-gif="">
+                    <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Patatapum</h5>
                         <p class="card-text text-muted flex-grow-1">Tarda un poco en armarse, pero su abrazo explosivo
                             vale la pena.</p>
@@ -142,9 +164,9 @@
             <div class="col-md-4 col-sm-6">
                 <div class="card h-100 shadow-sm card" data-precio="175">
                     <img src="img/Hd.webp"
-                     class="card-img-top mx-auto  mt-3" id="myAnimacionHielo" alt="Hielo"
-                      style="width: 120px; height: 120px;" data-static="img/carnivora.webp" data-gif="">
-                      <div class="card-body d-flex flex-column text-center">
+                    class="card-img-top mx-auto  mt-3" id="myAnimacionHielo" alt="Hielo"
+                    style="width: 120px; height: 120px;" data-static="img/carnivora.webp" data-gif="">
+                    <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Hielaguisantes</h5>
                         <p class="card-text text-muted flex-grow-1">Enfría a tus enemigos y los ralentiza. Ideal para
                             climas cálidos.</p>
@@ -158,9 +180,9 @@
             <div class="col-md-4 col-sm-6">
                 <div class="card h-100 shadow-sm card" data-precio="0">
                     <img src="img/seta.webp"
-                     class="card-img-top mx-auto  mt-3" id="myAnimacionSeta" alt="seta"
-                      style="width: 120px; height: 120px;" data-static="img/seta.webp" data-gif="">
-                      <div class="card-body d-flex flex-column text-center">
+                    class="card-img-top mx-auto  mt-3" id="myAnimacionSeta" alt="seta"
+                    style="width: 120px; height: 120px;" data-static="img/seta.webp" data-gif="">
+                    <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Seta Desesporada</h5>
                         <p class="card-text text-muted flex-grow-1">Gratis y trabajadora, aunque solo de noche y de
                             corto alcance.</p>
@@ -174,9 +196,9 @@
             <div class="col-md-4 col-sm-6">
                 <div class="card h-100 shadow-sm card" data-precio="125">
                     <img src="img/Jalapeno.webp"
-                     class="card-img-top mx-auto  mt-3" id="myAnimacionJapeno" alt="jalapeño"
-                      style="width: 120px; height: 120px;" data-static="img/Jalapeno.webp" data-gif="">
-                      <div class="card-body d-flex flex-column text-center">
+                    class="card-img-top mx-auto  mt-3" id="myAnimacionJapeno" alt="jalapeño"
+                    style="width: 120px; height: 120px;" data-static="img/Jalapeno.webp" data-gif="">
+                    <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Jalapeño</h5>
                         <p class="card-text text-muted flex-grow-1">Destruye toda una línea de zombies y derrite el
                             hielo. Muy picante.</p>
@@ -190,9 +212,9 @@
             <div class="col-md-4 col-sm-6">
                 <div class="card h-100 shadow-sm card" data-precio="50">
                     <img src="img/chayote.webp"
-                     class="card-img-top mx-auto  mt-3" id="myAnimacionChayote" alt="chayote"
-                      style="width: 120px; height: 120px;" data-static="img/chayote.webp" data-gif="">
-                      <div class="card-body d-flex flex-column text-center">
+                    class="card-img-top mx-auto  mt-3" id="myAnimacionChayote" alt="chayote"
+                    style="width: 120px; height: 120px;" data-static="img/chayote.webp" data-gif="">
+                    <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Chayote</h5>
                         <p class="card-text text-muted flex-grow-1">Aplastará al primer zombie que se le acerque. Mirada
                             intimidante incluida.</p>
@@ -206,9 +228,9 @@
             <div class="col-md-4 col-sm-6">
                 <div class="card h-100 shadow-sm card" data-precio="225">
                     <img src="img/gato.jpg"
-                     class="card-img-top mx-auto  mt-3" id="myAnimacionGato" alt="gato"
-                      style="width: 120px; height: 120px;" data-static="img/gato.jpg" data-gif="">
-                      <div class="card-body d-flex flex-column text-center">
+                    class="card-img-top mx-auto  mt-3" id="myAnimacionGato" alt="gato"
+                    style="width: 120px; height: 120px;" data-static="img/gato.jpg" data-gif="">
+                    <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Rabo Gato</h5>
                         <p class="card-text text-muted flex-grow-1">Cubre tres líneas al mismo tiempo. Tres cabezas
                             piensan mejor que una.</p>
@@ -222,9 +244,9 @@
             <div class="col-md-4 col-sm-6">
                 <div class="card h-100 shadow-sm card" data-precio="300">
                     <img src="img/Melon-pult.webp"
-                     class="card-img-top mx-auto  mt-3" id="myAnimacionMelon" alt="melon"
-                      style="width: 120px; height: 120px;" data-static="img/Melon-pult.webp" data-gif="">
-                      <div class="card-body d-flex flex-column text-center">
+                    class="card-img-top mx-auto  mt-3" id="myAnimacionMelon" alt="melon"
+                    style="width: 120px; height: 120px;" data-static="img/Melon-pult.webp" data-gif="">
+                    <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Melonpulta</h5>
                         <p class="card-text text-muted flex-grow-1">Daño masivo en área. Perfecta para cuando el jardín
                             se llena de problemas.</p>
@@ -234,13 +256,13 @@
                 </div>
             </div>
 
-             <!-- Empieza la carta del MMargarita -->
+            <!-- Empieza la carta del MMargarita -->
             <div class="col-md-4 col-sm-6">
                 <div class="card h-100 shadow-sm card" data-precio="50">
                     <img src="img/margarita.png"
-                     class="card-img-top mx-auto  mt-3" id="myAnimacionMargarita" alt="margarita"
-                      style="width: 120px; height: 120px;" data-static="img/Melon-pult.webp" data-gif="">
-                      <div class="card-body d-flex flex-column text-center">
+                    class="card-img-top mx-auto  mt-3" id="myAnimacionMargarita" alt="margarita"
+                    style="width: 120px; height: 120px;" data-static="img/Melon-pult.webp" data-gif="">
+                    <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Margarita</h5>
                         <p class="card-text text-muted flex-grow-1">Toma por ti las modenas doradas que ganas durante la partida.</p>
                         <h6 class="fw-bold fs-5 text-success">50 Soles ☀️</h6>
