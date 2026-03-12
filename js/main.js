@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gif.addEventListener("mouseout", () => {
     gif.src = imagenEstatica;
   });
-
+  
   botonesComprar.forEach((boton) => {
     boton.addEventListener("click", (evento) => {
       const id = evento.target.dataset.id;
@@ -25,6 +25,91 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const gif = document.getElementById("myAnimacionGirasol");
+  const imagenEstatica = gif.dataset.static;
+  const gifSrc = gif.dataset.gif;
+  const botonesComprar = document.querySelectorAll(".btn-add-carrito");
+
+  gif.addEventListener("mouseover", () => {
+    gif.src = gifSrc;
+  });
+
+  gif.addEventListener("mouseout", () => {
+    gif.src = imagenEstatica;
+  });
+  
+  botonesComprar.forEach((boton) => {
+    boton.addEventListener("click", (evento) => {
+      const id = evento.target.dataset.id;
+      const nombre = evento.target.dataset.nombre;
+      const precio = parseInt(evento.target.dataset.precio);
+      const moneda = evento.target.dataset.moneda;
+
+      let producto = { id, nombre, precio, moneda };
+
+      agregarAlCarrito(producto);
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const gif = document.getElementById("myAnimacionCarnivora");
+  const imagenEstatica = gif.dataset.static;
+  const gifSrc = gif.dataset.gif;
+  const botonesComprar = document.querySelectorAll(".btn-add-carrito");
+
+  gif.addEventListener("mouseover", () => {
+    gif.src = gifSrc;
+  });
+
+  gif.addEventListener("mouseout", () => {
+    gif.src = imagenEstatica;
+  });
+  
+  botonesComprar.forEach((boton) => {
+    boton.addEventListener("click", (evento) => {
+      const id = evento.target.dataset.id;
+      const nombre = evento.target.dataset.nombre;
+      const precio = parseInt(evento.target.dataset.precio);
+      const moneda = evento.target.dataset.moneda;
+
+      let producto = { id, nombre, precio, moneda };
+
+      agregarAlCarrito(producto);
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const gif = document.getElementById("myAnimacionNuez");
+  const imagenEstatica = gif.dataset.static;
+  const gifSrc = gif.dataset.gif;
+  const botonesComprar = document.querySelectorAll(".btn-add-carrito");
+
+  gif.addEventListener("mouseover", () => {
+    gif.src = gifSrc;
+  });
+
+  gif.addEventListener("mouseout", () => {
+    gif.src = imagenEstatica;
+  });
+  
+  botonesComprar.forEach((boton) => {
+    boton.addEventListener("click", (evento) => {
+      const id = evento.target.dataset.id;
+      const nombre = evento.target.dataset.nombre;
+      const precio = parseInt(evento.target.dataset.precio);
+      const moneda = evento.target.dataset.moneda;
+
+      let producto = { id, nombre, precio, moneda };
+
+      agregarAlCarrito(producto);
+    });
+  });
+});
+
 
 function validaFormulario() {
   /* Evita que se recarge la pagina */
