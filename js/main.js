@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  actualizarContador();
+  renderizarCarrito();
+
   const gif = document.getElementById("myAnimacion");
   const imagenEstatica = gif.dataset.static;
   const gifSrc = gif.dataset.gif;
@@ -87,7 +90,8 @@ function agregarAlCarrito(producto) {
   if (existe) existe.qty += 1;
   else carrito.push({ ...producto, qty: 1 });
   guardarCarrito(carrito);
-  contadorCarrito();
+  actualizarContador();
+  renderizarCarrito();
 }
 
 function eliminarDelCarrito(id) {
@@ -95,55 +99,32 @@ function eliminarDelCarrito(id) {
   guardarCarrito(carrito);
 }
 
-function contadorCarrito() {
-  const carrito = cargarCarrito();
-  const total = carrito.reduce((acc, item) => acc + item.qty, 0);
-  const contador = document.getElementById("cart-count");
-  if(contador){
-    contador.textContent = total;
-  }
+function actualizarContador() {
+  const carritoActual = cargarCarrito();
+  const totalItems = carritoActual.reduce(
+    (acumulador, producto) => acumulador + producto.qty,
+    0,
+  );
+  document.getElementById("cart-count").innerHTML = totalItems;
 }
 
-function renderCarrito() {
+function renderizarCarrito() {
   const carrito = cargarCarrito();
-  const tbody = document.getElementById("cart-items");
-  const spanTotal = document.getElementById("cart-total");
+  const listaHTML = document.getElementById("cart-items");
+  listaHTML.innerHTML = "";
 
-  if (!tbody || !spanTotal) return;
-
-  tbody.innerHTML = "";
-  let total = 0;
-
-  carrito.forEach((item) => {
-    const subtotal = item.precio * item.qty;
-    total += subtotal;
-
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${item.nombre}</td>
-      <td>${item.precio} ${item.moneda}</td>
-      <td>${item.qty}</td>
-      <td>${subtotal} ${item.moneda}</td>
-      <td>
-        <button class="btn btn-sm btn-danger btn-eliminar-item" data-id="${item.id}">
-          Eliminar
-        </button>
-      </td>
-    `;
-    tbody.appendChild(tr);
-  });
-
-  spanTotal.textContent = total;
-
-  // Listeners para botones "Eliminar" dentro del modal
-  const botonesEliminar = document.querySelectorAll(".btn-eliminar-item");
-  botonesEliminar.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const id = e.target.dataset.id;
-      eliminarDelCarrito(id);
-      contadorCarrito();
-      renderCarrito();
+  if (carrito.length === 0) {
+    listaHTML.innerHTML = `<li class="list-group-item text-center text-muted">El carrito está vacío... 🧟‍♂️🌻</li>`;
+  } else {
+    carrito.forEach((producto) => {
+      listaHTML.innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-center">
+          ${producto.nombre} (x${producto.qty})
+          <span class="badge bg-secondary rounded-pill">
+            ${producto.precio * producto.qty} ${producto.moneda}
+          </span>
+        </li>`;
     });
-  });
-}
+  }
 
+  const plantasEnCarrito = carrito.filter((item) => item.moneda === "soles");
+}
