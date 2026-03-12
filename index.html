@@ -11,13 +11,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/index.css" />
   </head>
-
   <body>
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"
     >
       <div class="container">
-        <a class="navbar-brand fw-bold text-success" href="#">🌱 PvZ Market</a>
+        <a class="navbar-brand fw-bold text-success" href="index.html"
+          >🌱 PvZ Market</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -29,13 +30,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-center">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
+              <a class="nav-link active" href="index.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="plantas.html">Plantas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="zombies.html">Zombies</a>
+              <a class="nav-link" href="zombies.html">Zombies</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contacto.html">Contacto</a>
@@ -43,8 +44,9 @@
             <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
               <button
                 class="btn btn-warning position-relative"
-                data-bs-toggle="modal"
-                data-bs-target="#cartModal"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#cartOffcanvas"
+                aria-controls="cartOffcanvas"
               >
                 🛒 Carrito
                 <span
@@ -80,46 +82,50 @@
       <div class="row g-4 mb-5" id="zombies-container"></div>
     </main>
 
-    <!--Empieza el carrito de compras  -->
-    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header bg-warning text-dark">
-            <h5 class="modal-title fw-bold">Tu Carrito de Adopción</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <ul id="cart-items" class="list-group mb-3">
-              <li class="list-group-item text-center text-muted">
-                El carrito está vacío... 🧟‍♂️🌻
-              </li>
-            </ul>
-            <div class="text-end">
-              <h6 class="fw-bold text-success">
-                Total Plantas: <span id="total-soles">0</span> ☀️
-              </h6>
-              <h6 class="fw-bold text-danger">
-                Total Zombies: <span id="total-cerebros">0</span> 🧠
-              </h6>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Seguir Viendo
-            </button>
-            <button type="button" class="btn btn-success" onclick="checkout()">
-              Pagar
-            </button>
-          </div>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="cartOffcanvas"
+      aria-labelledby="cartOffcanvasLabel"
+    >
+      <div class="offcanvas-header bg-warning text-dark">
+        <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel">
+          Tu Carrito de Adopción
+        </h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <ul id="cart-items" class="list-group mb-4 flex-grow-1">
+          <li class="list-group-item text-center text-muted">
+            El carrito está vacío... 🧟‍♂️🌻
+          </li>
+        </ul>
+
+        <div class="text-end mb-4 border-top pt-3">
+          <h6 class="fw-bold text-success">
+            Total Plantas: <span id="total-soles">0</span> ☀️
+          </h6>
+          <h6 class="fw-bold text-danger">
+            Total Zombies: <span id="total-cerebros">0</span> 🧠
+          </h6>
+        </div>
+
+        <div class="d-grid gap-2 mt-auto">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="offcanvas"
+          >
+            Seguir Viendo
+          </button>
+          <button type="button" class="btn btn-success" onclick="checkout()">
+            Pagar
+          </button>
         </div>
       </div>
     </div>
@@ -135,5 +141,7 @@
         <div class="toast-body fw-bold">¡Mascota añadida al carrito! 🐾</div>
       </div>
     </div>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
