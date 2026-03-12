@@ -41,6 +41,7 @@
             <li class="nav-item">
               <a class="nav-link" href="contacto.html">Contacto</a>
             </li>
+            <!-- Empieza el botón del carrito -->
             <button
               class="btn btn-warning position-relative"
               data-bs-toggle="modal"
@@ -423,5 +424,38 @@
         </div>
       </div>
     </main>
+<!-- Modal Carrito -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Tu carrito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cart-items">
+            <!-- Aquí se insertarán las filas del carrito -->
+          </tbody>
+        </table>
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Total: <span id="cart-total">0</span> Soles ☀️</h5>
+          <button id="btn-vaciar-carrito" class="btn btn-outline-danger">
+            Vaciar carrito
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   </body>
 </html>
