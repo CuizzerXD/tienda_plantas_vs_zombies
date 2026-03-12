@@ -49,9 +49,53 @@
         <h2 class="border-bottom pb-2 mb-4 text-success fw-bold">Nuestras Plantas</h2>
         <div class="row g-4 mb-5" id="plantas-container"></div>
 
-        <h2 class="border-bottom pb-2 mb-4 text-danger fw-bold">Zombies Domesticados</h2>
-        <div class="row g-4 mb-5" id="zombies-container"></div>
-    </main>
+       <h2 class="border-bottom pb-2 mb-4 text-danger fw-bold" 
+    style="cursor: pointer;" 
+    data-bs-toggle="collapse" 
+    data-bs-target="#zombies-container" 
+    aria-expanded="false" 
+    aria-controls="zombies-container">
+    Zombies Destacados 
+</h2>
+
+<div class="collapse row mb-5" id="zombies-container">
+    <div class="row g-4">
+       <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bg-dark text-white border-secondary">
+            <img src="IMG Zombies/Michael_Jackson_Zombie.png" class="card-img-top" alt="Nombre del Zombie 1">
+            <div class="card-body">
+                <h5 class="card-title text-danger">Zombie Jackson</h5>
+                <p class="card-text">El rey del pop, Michael Jackson sale de su tumba a bailar Thriller una vez mas
+                    sacando a otros zombies de su tumba para hacerlos mover el cuerpo </p>
+            </div>
+        </div>
+    </div>
+  
+
+
+       <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bg-dark text-white border-secondary">
+            <img src="IMG Zombies/Zombie Americano.png" class="card-img-top" alt="Nombre del Zombie 1">
+            <div class="card-body">
+                <h5 class="card-title text-danger">Zombie Americano Negro</h5>
+                <p class="card-text">Zombie America mas fuerte y resistente que el rojo </p>
+            </div>
+        </div>
+    </div>
+ 
+
+       <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bg-dark text-white border-secondary">
+            <img src="IMG Zombies/HD_Zomboss.png" class="card-img-top" alt="Nombre del Zombie 1">
+            <div class="card-body">
+                <h5 class="card-title text-danger">Zomboss</h5>
+                <p class="card-text">Lider de los zombies </p>
+            </div>
+</div>
+</div>
+</div>
+  </div>
+</main>
 
     <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -81,10 +125,5 @@
             </div>
         </div>
     </div>
-
-
-
-
 </body>
-
 </html>
