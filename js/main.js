@@ -16,6 +16,40 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Logica para musica de fondo (prender o apagar)
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("bg-music");
+  const toggle = document.getElementById("musicToggle");
+  const label = document.getElementById("musicLabel");
+
+  if (!audio || !toggle || !label) return;
+
+  audio.volume = 0.2;
+
+  const setUI = (isOn) => {
+    toggle.checked = isOn;
+    label.textContent = isOn ? "Música: ON" : "Música: OFF";
+  };
+
+  setUI(false);
+
+  toggle.addEventListener("change", async () => {
+    if (toggle.checked) {
+      try {
+        await audio.play();
+        setUI(true);
+      } catch (e) {
+        // Si el navegador bloquea el autoplay, revertimos el switch
+        setUI(false);
+      }
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+      setUI(false);
+    }
+  });
+});
+
 function validaFormulario() {
   /* Evita que se recarge la pagina */
   event.preventDefault();
@@ -44,6 +78,18 @@ function validaFormulario() {
   localStorage.setItem("comentarios", JSON.stringify(mensajes));
 }
 
+function extraerNumeroPrecioDesdeH6(col) {
+  const card = col.querySelector(".card");
+  if (!card) return 0;
+  const h6 = card.querySelector("h6.fs-5");
+  if (!h6) return 0;
+  const texto = h6.textContent || "";
+  // Quita todo menos dígitos (y punto/coma por si acaso)
+  const soloNumero = texto.replace(/[^\d.,]/g, "").replace(",", ".");
+  const n = parseFloat(soloNumero);
+  return Number.isFinite(n) ? n : 0;
+}
+
 function filtradoTienda(orden) {
   //Traemos de dentro del elemento main el elemento que concuerde con la clase .row ya que este es el contenedor
   //que tiene dentro todas las cards
@@ -57,21 +103,11 @@ function filtradoTienda(orden) {
   //cool md-4 y col-sm-6 para despues agregarlos a un arreglo para poder utilizar el metodo sort
   const columnas = Array.from(row.querySelectorAll(':scope > .col-md-4.col-sm-6'));
 
-  //El metodo sort sirve para ordenar colA y colB son los div.col-md-4.col-sm-6
   columnas.sort((colA, colB) => {
-    const cardA = colA.querySelector('.planta-card');
-    const cardB = colB.querySelector('.planta-card');
-    //El signo ? vendria siendo una condicional llamada optional chaining y ?? se llama nullish coalescing
-    const precioA = parseInt(cardA?.dataset.precio ?? 0, 10);
-    const precioB = parseInt(cardB?.dataset.precio ?? 0, 10);
-
-    // 'mayor-menor'
-    if (orden === 'mayor-menor') {
-      return precioB - precioA;  
-    }
-    // 'menor-mayor'
-    return precioA - precioB;    
+    const precioA = extraerNumeroPrecioDesdeH6(colA);
+    const precioB = extraerNumeroPrecioDesdeH6(colB);
+    if (orden === "mayor-menor") return precioB - precioA;
+    return precioA - precioB;
   });
-
   columnas.forEach((col) => row.appendChild(col));
 }

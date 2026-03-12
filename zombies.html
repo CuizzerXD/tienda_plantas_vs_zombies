@@ -45,9 +45,21 @@
 
     <main class="container my-5">
         <h2 class="border-bottom pb-2 mb-4 text-danger fw-bold">Zombies Domesticados</h2>
+            <!--Boton de filtrado  -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filtrar por
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" onclick="filtradoTienda('mayor-menor')">Mayor a menor</a></li>
+                    <li><a class="dropdown-item" onclick="filtradoTienda('menor-mayor')">Menor a mayor</a></li>
+                </ul>
+            </div>
+            <hr>
+
         <div class="row g-4 mb-5">
             <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm zombie-card">
+                <div class="card h-100 shadow-sm card">
                     <img src="img/ZombieBasico.webp" class="card-img-top mx-auto rounded-circle mt-3" alt="Zombie Básico"
                         style="width: 120px;">
                     <div class="card-body d-flex flex-column text-center">
@@ -61,7 +73,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm zombie-card">
+                <div class="card h-100 shadow-sm card">
                     <img src="img/ZombieAbanderado.webp" class="card-img-top mx-auto rounded-circle mt-3" alt="Zombie Abanderado"
                         style="width: 120px;">
                     <div class="card-body d-flex flex-column text-center">
@@ -75,7 +87,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm zombie-card">
+                <div class="card h-100 shadow-sm card">
                     <img src="img/ZombieCaracono.webp" class="card-img-top mx-auto rounded-circle mt-3" alt="Zombie Caracono"
                         style="width: 120px;">
                     <div class="card-body d-flex flex-column text-center">
@@ -89,7 +101,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm zombie-card">
+                <div class="card h-100 shadow-sm card">
                     <img src="img/ZombieSaltigaro.webp" class="card-img-top mx-auto rounded-circle mt-3" alt="Zombie Saltígaro"
                         style="width: 120px;">
                     <div class="card-body d-flex flex-column text-center">
@@ -103,7 +115,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm zombie-card">
+                <div class="card h-100 shadow-sm card">
                     <img src="img/ZombieCaracubo.webp" class="card-img-top mx-auto rounded-circle mt-3" alt="Zombie Caracubo"
                         style="width: 120px;">
                     <div class="card-body d-flex flex-column text-center">
@@ -117,7 +129,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm zombie-card">
+                <div class="card h-100 shadow-sm card">
                     <img src="img/ZombieLector.webp" class="card-img-top mx-auto rounded-circle mt-3" alt="Zombie Lector"
                         style="width: 120px;">
                     <div class="card-body d-flex flex-column text-center">
@@ -131,7 +143,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm zombie-card">
+                <div class="card h-100 shadow-sm card">
                     <img src="img/ZombiePortero.webp" class="card-img-top mx-auto rounded-circle mt-3" alt="Zombie Portero"
                         style="width: 120px;">
                     <div class="card-body d-flex flex-column text-center">
@@ -145,7 +157,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm zombie-card">
+                <div class="card h-100 shadow-sm card">
                     <img src="img/ZombieDeportista.webp" class="card-img-top mx-auto rounded-circle mt-3" alt="Zombie Deportista"
                         style="width: 120px;">
                     <div class="card-body d-flex flex-column text-center">
@@ -159,7 +171,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm zombie-card">
+                <div class="card h-100 shadow-sm card">
                     <img src="img/ZombieBailarin.webp" class="card-img-top mx-auto rounded-circle mt-3" alt="Zombie Bailarín"
                         style="width: 120px;">
                     <div class="card-body d-flex flex-column text-center">
@@ -173,7 +185,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm zombie-card">
+                <div class="card h-100 shadow-sm card">
                     <img src="img/ZombieBuzo.webp" class="card-img-top mx-auto rounded-circle mt-3" alt="Zombie Buzo"
                         style="width: 120px;">
                     <div class="card-body d-flex flex-column text-center">
@@ -187,7 +199,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm zombie-card">
+                <div class="card h-100 shadow-sm card">
                     <img src="img/Zombictor.webp" class="card-img-top mx-auto rounded-circle mt-3" alt="Zombictor" style="width: 120px;">
                     <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Zombictor</h5>
@@ -200,7 +212,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm zombie-card">
+                <div class="card h-100 shadow-sm card">
                     <img src="img/Zombistein.webp" class="card-img-top mx-auto rounded-circle mt-3" alt="Zombistein" style="width: 120px;">
                     <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title fw-bold">Zombistein</h5>
@@ -239,7 +251,7 @@
     </div>
 
     <script src="js/cart.js"></script>
-
+    <script src="js/main.js"></script>
 </body>
 
 </html>
