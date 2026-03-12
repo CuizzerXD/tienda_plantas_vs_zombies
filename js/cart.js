@@ -69,13 +69,18 @@
         if (confirm('¿Deseas finalizar tu compra?')) {
             localStorage.removeItem(CART_KEY);
             updateCartUI();
-            // optionally hide the offcanvas
             const offcanvasEl = document.getElementById('cartOffcanvas');
             if (offcanvasEl) {
                 const bs = bootstrap.Offcanvas.getInstance(offcanvasEl);
                 if (bs) bs.hide();
             }
         }
+    }
+
+    function clearCart() {
+        if (!confirm('¿Vaciar todo el carrito?')) return;
+        localStorage.removeItem(CART_KEY);
+        updateCartUI();
     }
 
     function bindAddButtons() {
