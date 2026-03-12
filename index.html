@@ -71,15 +71,68 @@
     </header>
 
     <main class="container my-5">
-      <h2 class="border-bottom pb-2 mb-4 text-success fw-bold">
-        Nuestras Plantas
-      </h2>
-      <div class="row g-4 mb-5" id="plantas-container"></div>
+        <!--
+        <h2 class="border-bottom pb-2 mb-4 text-success fw-bold">Nuestras Plantas</h2>
+        <div class="row g-4 mb-5" id="plantas-container"></div>
+         -->
 
-      <h2 class="border-bottom pb-2 mb-4 text-danger fw-bold">
-        Zombies Domesticados
-      </h2>
-      <div class="row g-4 mb-5" id="zombies-container"></div>
+        <button id="boton" class="btn  btn-lg mb-4 text-success fw-bold" data-bs-toggle="collapse" data-bs-target="#reporte">Nuestras Plantas</button>
+         <h2 class="border-bottom"></h2>
+
+<div class="collapse mt-4" id="reporte">
+
+<div class="row g-4">
+    <h2 class="text-left text-warning mt-5">
+Mas Vendidos</h2>
+
+<!-- Card 1 -->
+<div class="col-md-4">
+<div class="card h-100 shadow">
+<img src="img/Peashooter1.webp" class="card-img-top p-3" alt="Peashooter">
+<div class="card-body text-center">
+<h5 class="card-title">Lanzaguisantes</h5>
+<p class="card-text">Dispara guisantes para defender tu jardín.</p>
+<button class="btn btn-success" onclick="location.href='plantas.html'"  >Agregar al carrito</button>
+</div>
+</div>
+</div>
+
+<!-- Card 2 -->
+<div class="col-md-4">
+<div class="card h-100 shadow" >
+<img src="img/Girasol.webp" class="card-img-top p-3" alt="Sunflower">
+<div class="card-body text-center">
+<h5 class="card-title">Girasol</h5>
+<p class="card-text">Produce sol para comprar más plantas.</p>
+<button class="btn btn-success" onclick="location.href='plantas.html'">Agregar al carrito</button>
+</div>
+</div>
+</div>
+
+<!-- Card 3 -->
+<div class="col-md-4">
+<div class="card h-100 shadow">
+<img src="img/gato.jpg" class="card-img-top p-3" alt="Cactus">
+<div class="card-body text-center">
+<h5 class="card-title">Rabo Gato</h5>
+<p class="card-text">Perfecto para atacar zombis voladores.</p>
+<button class="btn btn-success" onclick="location.href='plantas.html'" >Agregar al carrito</button>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+    
+    
+   
+
+
+
+
+       <!--<h2 class="border-bottom pb-2 mb-4 text-danger fw-bold" ata-bs-toggle="collapse" >Zombies Domesticados</h2>
+        <div class="row g-4 mb-5" id="zombies-container"></div> --> 
     </main>
 
     <div
@@ -141,6 +194,10 @@
         <div class="toast-body fw-bold">¡Mascota añadida al carrito! 🐾</div>
       </div>
     </div>
+
+
+</body>
+</html>
 
     <script src="js/main.js"></script>
   </body>

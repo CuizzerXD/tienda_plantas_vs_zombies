@@ -1,18 +1,19 @@
-//Logica para animacion de las plantas
+// Logica para animacion de las plantas
 document.addEventListener("DOMContentLoaded", () => {
-  const gif = document.getElementById("myAnimacion");
-  const imagenEstatica = gif.dataset.static;
-  const gifSrc = gif.dataset.gif;
+  const imgs = document.querySelectorAll("img[data-static][data-gif]");
+  imgs.forEach((img) => {
+    const staticSrc = img.dataset.static;
+    const gifSrc = img.dataset.gif;
+    if (!staticSrc || !gifSrc) return;
 
+    img.addEventListener("mouseover", () => {
+      img.src = gifSrc;
+    });
 
-  gif.addEventListener("mouseover", () => {
-    gif.src = gifSrc;
+    img.addEventListener("mouseout", () => {
+      img.src = staticSrc;
+    });
   });
-
-  gif.addEventListener("mouseout", () => {
-    gif.src = imagenEstatica;
-  });
-
 });
 
 function validaFormulario() {
