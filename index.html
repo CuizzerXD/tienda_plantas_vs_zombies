@@ -96,55 +96,101 @@
         
         <button id="boton" class="btn  btn-lg mb-4 text-success fw-bold" data-bs-toggle="collapse" data-bs-target="#reporte">Nuestras Plantas</button>
         <h2 class="border-bottom"></h2>
-        
 
-       <h2 class="border-bottom pb-2 mb-4 text-danger fw-bold" 
-    style="cursor: pointer;" 
-    data-bs-toggle="collapse" 
-    data-bs-target="#zombies-container" 
-    aria-expanded="false" 
-    aria-controls="zombies-container">
-    Zombies Domesticos
- 
-</h2>
+    <div class="collapse mt-4" id="reporte">
 
-<div class="collapse row mb-5" id="zombies-container">
-    <div class="row g-4">
-       <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 bg-dark text-white border-secondary">
-            <img src="IMG Zombies/Michael_Jackson_Zombie.png" class="card-img-top" alt="Nombre del Zombie 1">
-            <div class="card-body">
-                <h5 class="card-title text-danger">Zombie Jackson</h5>
-                <p class="card-text">El rey del pop, Michael Jackson sale de su tumba a bailar Thriller una vez mas
-                    sacando a otros zombies de su tumba para hacerlos mover el cuerpo </p>
+        <div class="row g-4">
+        <h2 class="text-left text-warning mt-5">
+    Mas Vendidos</h2>
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+    <div class="card h-100 shadow">
+    <img src="img/Peashooter1.webp" class="card-img-top p-3" alt="Peashooter">
+    <div class="card-body text-center">
+    <h5 class="card-title">Lanzaguisantes</h5>
+    <p class="card-text">Dispara guisantes para defender tu jardín.</p>
+    <button class="btn btn-success" onclick="location.href='plantas.html'"  >Agregar al carrito</button>
+    </div>
+    </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+    <div class="card h-100 shadow" >
+    <img src="img/Girasol.webp" class="card-img-top p-3" alt="Sunflower">
+    <div class="card-body text-center">
+    <h5 class="card-title">Girasol</h5>
+    <p class="card-text">Produce sol para comprar más plantas.</p>
+    <button class="btn btn-success" onclick="location.href='plantas.html'">Agregar al carrito</button>
+    </div>
+    </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+    <div class="card h-100 shadow">
+    <img src="img/gato.jpg" class="card-img-top p-3" alt="Cactus">
+    <div class="card-body text-center">
+    <h5 class="card-title">Rabo Gato</h5>
+    <p class="card-text">Perfecto para atacar zombis voladores.</p>
+    <button class="btn btn-success" onclick="location.href='plantas.html'" >Agregar al carrito</button>
+    </div>
+    </div>
+    </div>
+
+    </div>
+            
+
+        <div class="collapse mt-4" id="reporte">
+        <h2 class="border-bottom pb-2 mb-4 text-danger fw-bold" 
+        style="cursor: pointer;" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#zombies-container" 
+        aria-expanded="false" 
+        aria-controls="zombies-container">
+        Zombies Domesticos
+    
+    </h2>
+
+    <div class="collapse row mb-5" id="zombies-container">
+        <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 bg-dark text-white border-secondary">
+                <img src="IMG Zombies/Michael_Jackson_Zombie.png" class="card-img-top" alt="Nombre del Zombie 1">
+                <div class="card-body">
+                    <h5 class="card-title text-danger">Zombie Jackson</h5>
+                    <p class="card-text">El rey del pop, Michael Jackson sale de su tumba a bailar Thriller una vez mas
+                        sacando a otros zombies de su tumba para hacerlos mover el cuerpo </p>
+                </div>
             </div>
         </div>
-    </div>
-  
+    
 
 
-       <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 bg-dark text-white border-secondary">
-            <img src="IMG Zombies/Zombie Americano.png" class="card-img-top" alt="Nombre del Zombie 1">
-            <div class="card-body">
-                <h5 class="card-title text-danger">Zombie Americano Negro</h5>
-                <p class="card-text">Zombie America mas fuerte y resistente que el rojo </p>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 bg-dark text-white border-secondary">
+                <img src="IMG Zombies/Zombie Americano.png" class="card-img-top" alt="Nombre del Zombie 1">
+                <div class="card-body">
+                    <h5 class="card-title text-danger">Zombie Americano Negro</h5>
+                    <p class="card-text">Zombie America mas fuerte y resistente que el rojo </p>
+                </div>
             </div>
         </div>
-    </div>
- 
+    
 
-       <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 bg-dark text-white border-secondary">
-            <img src="IMG Zombies/HD_Zomboss.png" class="card-img-top" alt="Nombre del Zombie 1">
-            <div class="card-body">
-                <h5 class="card-title text-danger">Zomboss</h5>
-                <p class="card-text">Lider de los zombies </p>
-            </div>
-</div>
-</div>
-</div>
-  </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 bg-dark text-white border-secondary">
+                <img src="IMG Zombies/HD_Zomboss.png" class="card-img-top" alt="Nombre del Zombie 1">
+                <div class="card-body">
+                    <h5 class="card-title text-danger">Zomboss</h5>
+                    <p class="card-text">Lider de los zombies </p>
+                </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
 </main>
 
     <div
