@@ -10,4 +10,10 @@ body { background-color: #f4f7f6; }
         .card:hover .card-img-top { transform: scale(1.1); }
         .planta-card { border-top: 4px solid #198754; }
         .zombie-card { border-top: 4px solid #dc3545; }
+
+
+ #boton {
+    font-size: 32px;
+    padding-left: 0px;
+ }       
   
